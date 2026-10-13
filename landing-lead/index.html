@@ -5,27 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Promo Spesial - Daftar Sekarang</title>
 
-
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1061291833613023');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1061291833613023&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-
-
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -97,7 +77,7 @@ h1{font-size:clamp(32px,5.4vw,56px);line-height:1.06;letter-spacing:-.025em;marg
         <h2>Daftar sekarang</h2>
         <p class="hint">Isi data singkat di bawah ini.</p>
 
-        <!-- Form Zoho Web-to-Lead (Lead_CRM). Jangan ubah nilai hidden dan nama field. -->
+        <!-- Form Zoho Web-to-Lead (Lead_CRM) -->
         <form id="webform7644858000000705005" name="WebToLeads7644858000000705005" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8" novalidate>
           <input type="text" style="display:none;" name="xnQsjsdp" value="fede8f683e8cdf68990adcc71cf3f259c91657294a1b8a33c6d9fb8cd46e3927" />
           <input type="hidden" name="zc_gad" id="zc_gad" value="" />
@@ -121,72 +101,14 @@ h1{font-size:clamp(32px,5.4vw,56px);line-height:1.06;letter-spacing:-.025em;marg
             <label for="Email">Email (opsional)</label>
             <span class="msg" role="alert"></span>
           </div>
-          <div class="field">
-            <input type="text" id="Company" name="Company" maxlength="200" placeholder=" " autocomplete="organization" />
-            <label for="Company">Nama usaha atau instansi (opsional)</label>
-            <span class="msg" role="alert"></span>
-          </div>
-
-          <button type="submit" class="btn" id="formsubmit">SUBMIT</button>
-          <p class="fine">Dengan mengirim data, kamu setuju dihubungi lewat WhatsApp atau email.</p>
-
-          <!-- Do not remove this --- Analytics Tracking code starts -->
-          <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=2bc0e5d384dcfba019e19a96367b709c5dd1ec56cd4667ebb4bd2a564bd19791b7285742e38003cfb821bb7a722fbc04gid43b43c82495b44619e620aacb0b4a7900f627cf3d51646bf77826b224555c835gid56301f35be5bd347475199dfdb0f71f455fa83d2e72188372737ca23107eb568gidb983cff9157aba7da354dbdf522c6d3bbbed8bce28d62eb0391ddc498c9bfbfc&tw=4b158ac3543d5dbb8636a4d046894e7d5829eedd047a0238b68541d1a08d5186&version=v2"></script>
-          <!-- Do not remove this --- Analytics Tracking code ends. -->
+          
+          <button type="submit" class="btn" id="formsubmit">Kirim Data</button>
         </form>
+
       </div>
     </div>
   </section>
 </main>
 
-<script>
-(function(){
-  var root=document.documentElement,stage=document.getElementById('stage'),deck=document.getElementById('deck');
-  var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if(!calm){
-    stage.addEventListener('pointermove',function(e){
-      var r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      deck.style.setProperty('--ry',((x-.5)*14).toFixed(1)+'deg');
-      deck.style.setProperty('--rx',((.5-y)*14).toFixed(1)+'deg');
-      deck.style.setProperty('--mx',(x*100).toFixed(0)+'%');
-      deck.style.setProperty('--my',(y*100).toFixed(0)+'%');
-    });
-    stage.addEventListener('pointerleave',function(){
-      deck.style.setProperty('--rx','0deg');deck.style.setProperty('--ry','0deg');
-    });
-    document.addEventListener('pointermove',function(e){
-      root.style.setProperty('--px',(e.clientX/innerWidth-.5).toFixed(3));
-      root.style.setProperty('--py',(e.clientY/innerHeight-.5).toFixed(3));
-    });
-  }
-
-  var f=document.getElementById('webform7644858000000705005'),btn=document.getElementById('formsubmit');
-
-  function fail(name,text,e){
-    var el=f.elements[name],box=el.closest('.field');
-    box.classList.remove('bad');void box.offsetWidth;box.classList.add('bad');
-    box.querySelector('.msg').textContent=text;
-    el.focus();e.preventDefault();
-  }
-  f.addEventListener('input',function(e){
-    var box=e.target.closest('.field');
-    if(box){box.classList.remove('bad');box.querySelector('.msg').textContent='';}
-  });
-
-  f.addEventListener('submit',function(e){
-    var name=f.elements['Last Name'].value.trim(),
-        digits=f.elements['Phone'].value.replace(/\D/g,''),
-        mail=f.elements['Email'].value.trim();
-    if(!name){return fail('Last Name','Isi nama lengkap kamu.',e);}
-    if(digits.length<9||digits.length>15){return fail('Phone','Masukkan nomor HP atau WhatsApp aktif, contoh 0812xxxxxxx.',e);}
-    if(mail&&!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(mail)){return fail('Email','Format email belum benar, contoh nama@email.com.',e);}
-    if(!f.elements['Company'].value.trim()){f.elements['Company'].value='Pribadi';}
-    btn.disabled=true;btn.textContent='Mengirim...';
-  });
-
-  addEventListener('pageshow',function(){btn.disabled=false;btn.textContent='SUBMIT';});
-})();
-</script>
 </body>
 </html>
