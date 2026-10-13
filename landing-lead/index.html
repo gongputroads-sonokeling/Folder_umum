@@ -6,7 +6,7 @@
 <div id = 'crmWebToEntityForm' class = 'zcwf_lblLeft crmWebToEntityForm' style = 'max-width: 600px;'>
 	<meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
 		<META HTTP-EQUIV = 'content-type' CONTENT = 'text/html;charset=UTF-8'>
-			<form id = 'webform7644858000000705005' action = 'https://crm.zoho.com/crm/WebToLeadForm' name = WebToLeads7644858000000705005 method = 'POST' onSubmit = 'javascript:document.charset="UTF-8"; return checkMandatory7644858000000705005()' accept-charset = 'UTF-8'>
+			<form id = 'webform7644858000000705005' action = 'https://zoho.com' name = WebToLeads7644858000000705005 method = 'POST' onSubmit = 'javascript:document.charset="UTF-8"; return checkMandatory7644858000000705005()' accept-charset = 'UTF-8'>
 				<input type = 'text' style = 'display:none;' name = 'xnQsjsdp' value = 'fede8f683e8cdf68990adcc71cf3f259c91657294a1b8a33c6d9fb8cd46e3927'>
 				</input>
 				<input type = 'hidden' name = 'zc_gad' id = 'zc_gad' value = ''>
@@ -22,7 +22,7 @@
 					html,body{
 						margin: 0px;
 					}
-					/* Efek 3D pada tombol utama */
+					/* Efek 3D pada tombol utama (Submit) */
 					.formsubmit.zcwf_button{
 						color: white !important;
 						background: linear-gradient(180deg, #00A3F3 0%, #0279FF 100%) !important;
@@ -35,6 +35,7 @@
 						border-radius: 8px !important;
 						font-size: 14px !important;
 						max-width: 140px !important;
+						display: inline-block !important;
 					}
 					.formsubmit.zcwf_button:hover{
 						background: linear-gradient(180deg, #00b4ff 0%, #0285ff 100%) !important;
@@ -45,6 +46,23 @@
 					.formsubmit.zcwf_button:active{
 						transform: translateY(4px) !important;
 						box-shadow: 0 1px 0 #0159b9, 0 4px 6px rgba(2, 121, 255, 0.2) !important;
+					}
+					/* Gaya tombol Reset 3D (Secondary) */
+					.zcwf_lblLeft .zcwf_button:not(.formsubmit) {
+						background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%) !important;
+						border: 1px solid #cbd5e1 !important;
+						box-shadow: 0 4px 0 #cbd5e1, 0 6px 10px rgba(0,0,0,0.05) !important;
+						color: #334155 !important;
+						font-weight: bold;
+						padding: 9px 24px !important;
+						border-radius: 8px !important;
+						font-size: 14px !important;
+						transition: all 0.1s ease-in-out !important;
+						display: inline-block !important;
+					}
+					.zcwf_lblLeft .zcwf_button:not(.formsubmit):active {
+						transform: translateY(3px) !important;
+						box-shadow: 0 1px 0 #cbd5e1, 0 2px 4px rgba(0,0,0,0.05) !important;
 					}
 					/* Desain 3D Container Utama Form */
 					#crmWebToEntityForm.zcwf_lblLeft{
@@ -162,10 +180,8 @@
 						margin: 18px 0px;
 					}
 					.zcwf_lblLeft .formsubmit{
-						margin-right: 5px;
+						margin-right: 12px;
 						cursor: pointer;
-						color: #313949;
-						font-size: 12px;
 					}
 					.zcwf_lblLeft .zcwf_privacy_txt{
 						width: 90%;
@@ -177,33 +193,6 @@
 						color: #313949;
 						padding-top: 2px;
 						margin-left: 6px;
-					}
-					.zcwf_lblLeft .zcwf_button{
-						font-size: 12px;
-						color: #313949;
-						border: 1px solid #c0c6cc;
-						padding: 3px 9px;
-						border-radius: 4px;
-						cursor: pointer;
-						max-width: 120px;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-					}
-					.zcwf_lblLeft .zcwf_tooltip_over{
-						position: relative;
-					}
-					.zcwf_lblLeft .zcwf_tooltip_ctn{
-						position: absolute;
-						background: #dedede;
-						padding: 3px 6px;
-						top: 3px;
-						border-radius: 4px;
-						word-break: break-word;
-						min-width: 100px;
-						max-width: 150px;
-						color: #313949;
-						z-index: 100;
 					}
 					.zcwf_lblLeft .zcwf_ckbox{
 						float: left;
@@ -287,6 +276,5 @@
 						</div>
 					</div>
 				</div>
+				<!-- Bagian tombol aksi yang sudah diperbaiki -->
 				<div class = 'zcwf_row'>
-					<div class = 'zcwf_col_lab'></div>
-					<div class = 'zcwf_col_fld'>
