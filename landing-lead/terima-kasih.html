@@ -18,17 +18,16 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1061291833613023');
 fbq('track', 'PageView');
-fbq('track', 'Lead');
 
-// Lead: terpicu sekali per sesi browser, supaya refresh halaman tidak menghitung ulang
-try {
-  if (!sessionStorage.getItem('lead_sent')) {
+// Lead: dikirim sekali, lalu diblokir 10 menit agar refresh tidak menghitung ulang
+(function () {
+  var K = 'lead_sent_at', now = Date.now(), last = 0;
+  try { last = parseInt(sessionStorage.getItem(K) || '0', 10) || 0; } catch (e) {}
+  if (now - last > 600000) {
     fbq('track', 'Lead');
-    sessionStorage.setItem('lead_sent', '1');
+    try { sessionStorage.setItem(K, String(now)); } catch (e) {}
   }
-} catch (e) {
-  fbq('track', 'Lead');
-}
+})();
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1061291833613023&ev=PageView&noscript=1"
